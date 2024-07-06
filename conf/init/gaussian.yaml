@@ -1,0 +1,6 @@
+mode: simple
+lora_A: unit
+lora_B: unit
+dtype: fp32
+stable_gamma: 16
+scale: default

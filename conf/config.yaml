@@ -1,0 +1,12 @@
+defaults:
+  - _self_
+  - model: t5base
+dry_run: False
+wandb:
+  project: "glue_new"
+  name: null
+hydra:
+  sweeper:
+    params:
+      ++dataset_name: mnli
+      ++seed: 0
