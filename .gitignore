@@ -1,0 +1,10 @@
+snapshot/
+data_cache/
+**/__pycache__
+sh/
+snapshot*/
+results*/
+*results.txt
+tmp.py
+code_eval/
+wandb/
