@@ -46,8 +46,8 @@ def replace_A_with_Linear(model: torch.nn.Module, target):
 def dequantize(model, dtype):
     if dtype == "int8":
         target = LoraLinear8bitLt
-    elif target == LoraLinear4bit:
-        dtype = "nf4"
+    elif dtype = "nf4":
+        target == LoraLinear4bit
     replace_A_with_Linear(model=model, target=target)
 
 
