@@ -7,7 +7,6 @@ hydra-core
 hydra-optuna-sweeper
 omegaconf
 pandas
-peft
 psutil
 regex
 transformers
