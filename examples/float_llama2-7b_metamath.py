@@ -120,7 +120,7 @@ def main(lora_alpha=8, lora_rank=32, sample_size=128, seed=31):
     if accelerator.is_local_main_process:
         save_loraga_model_final(model=model, save_dir=save_dir)
         model, tokenizer = initialize_text_to_text_model(
-            model_id, model_type, model_dtype, flash_attention=True
+            model_id, model_type, model_dtype, flash_attention=False
         )
         model = PeftModel.from_pretrained(model, save_dir)
         print(model)

@@ -24,11 +24,14 @@ eigenvectors of the gradient matrix, as opposed to random initialization with a 
 
 ### 1. Install custom peft
 
-First, clone the LoRA-GA repository and install custom `peft`:
+1. First install the pytorch version suitable for your cuda.
+
+2. Clone the LoRA-GA repository, install the dependency packages, and install custom `peft`
 
 ```bash
 git clone https://github.com/Outsider565/LoRA-GA.git
 cd LoRA-GA
+pip install -r requirements.txt
 pip install -e peft
 ```
 
@@ -103,8 +106,6 @@ CUDA_VISIBLE_DEVICES="0,1,2,3" python -m accelerate.commands.launch \
 --config_file examples/accelerate_config.yaml \
 {python_file_path}
 ```
-
- you can use command like this
 
 ```bash
 CUDA_VISIBLE_DEVICES="0,1,2,3" python -m accelerate.commands.launch \

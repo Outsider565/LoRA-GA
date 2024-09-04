@@ -1,0 +1,15 @@
+accelerate
+bitsandbytes
+datasets
+fire
+huggingface-hub
+hydra-core
+hydra-optuna-sweeper
+omegaconf
+pandas
+peft
+psutil
+regex
+transformers
+wandb
+flash-attn
