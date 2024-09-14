@@ -3,12 +3,12 @@ import torch
 
 class GradientOffloadHookContext:
     def __init__(
-            self,
-            model: torch.nn.Module,
-            record_dict: dict,
-            enable: bool = True,
-            *args,
-            **kwargs,
+        self,
+        model: torch.nn.Module,
+        record_dict: dict,
+        enable: bool = True,
+        *args,
+        **kwargs,
     ):
         """Offload gradient to cpu
 
@@ -37,9 +37,10 @@ class GradientOffloadHookContext:
 
     def register_gradient_hook(self):
         for _, param in self.model.named_parameters():
-            hook = param.register_hook(
-                self.get_record_gradient_hook(self.model, self.record_dict)
-            )
+            param: torch.nn.Parameter
+            if not param.requires_grad:
+                continue
+            hook = param.register_hook(self.get_record_gradient_hook(self.model, self.record_dict))
             self.handle_list.append(hook)
 
     def get_record_gradient_hook(self, model, record_dict):
