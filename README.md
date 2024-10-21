@@ -116,7 +116,7 @@ examples/float_llama2-7b_metamath.py
 
 ## Note on Usage
 
-The `reproduce` directory contains legacy code intended solely for reproducing the results of the original paper. This is not the recommended approach for using LoRA-GA.
+The `reproduce` directory contains legacy code intended solely for reproducing the results of the original paper. This is **NOT** the recommended approach for using LoRA-GA (Some numerical problem could happen).
 
 For a more numerically stable and convenient experience, we highly recommend using LoRA-GA through the our custom `peft` library. Detailed usage instructions can be found in the [Quick Start](#quick-start) above. This new API ensures better compatibility and ease of use.
 
